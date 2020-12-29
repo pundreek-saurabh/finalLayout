@@ -4,6 +4,9 @@ body{
     background-color: rgb(255, 255, 255);
     margin: 0px 0px 0px 0px;
 }
+.active{
+    color:red;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -22,9 +25,7 @@ body{
         margin: 10px 300px 5px 50px;
         font-size: 20px;
     }
-     .active{
-        color:red;
-    }
+    
     .logo{
         font-size: 30px;
         margin-left: 100px;

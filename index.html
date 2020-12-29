@@ -11,7 +11,7 @@
     <section class="navbar">
         <span class="logo">BeLearn</span>
         <ul>
-            <li><a href="#" class="navButton">Home</a></li>
+            <li><a href="#" class="navButton active">Home</a></li>
             <li><a href="#"class="navButton">About</a></li>
             <li><a href="#"class="navButton">Courses</a></li>
             <li><a href="#"class="navButton">Events</a></li>
@@ -92,15 +92,12 @@
           //{
            // element.style.color="red";
          // };
-         element.addEventListener("click", ()=>{
-            element.classList.toggle(".navbar.active");
+         element.addEventListener("click", function(){
+            var y=document.querySelector(".active");
+            y.classList.remove("active");
+            this.classList.toggle("active");
          });
-          
         }
-
-
-
-
         </script>
 </body>
 </html>
