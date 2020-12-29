@@ -10,7 +10,7 @@
 <body>
     <section class="navbar">
         <span class="logo">BeLearn</span>
-        <ul id="links">
+        <ul class="links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Courses</a></li>
@@ -82,20 +82,21 @@
           hamburger.classList.toggle("is-active");
           // Do something else, like open/close menu
         });
-        </script>
-        <script>
-            var change =document.querySelectorAll("#links");
-                
-                for(i=0;i<change.length;i++){
-                    
-                    var change1=change[i];
-                    change1.addEventListener("click",function(){
 
-                        var x=document.querySelector("#links.active");
-                        x.classList.remove("active");
-                        this.classList.toggle("active");
-                    });
-                 }
+
+        var a=document.querySelectorAll(".links");
+        console.log(a.length);
+        for (let i = 0; i < a.length; i++) {
+          const element = a[i];
+          element.onclick=()=>
+          {
+            element.style.color="red";
+          };
+        }
+
+
+
+
         </script>
 </body>
 </html>
