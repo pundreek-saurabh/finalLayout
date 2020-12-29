@@ -10,12 +10,12 @@
 <body>
     <section class="navbar">
         <span class="logo">BeLearn</span>
-        <ul class="links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Blog</a></li>
+        <ul>
+            <li><a href="#" class="navButton">Home</a></li>
+            <li><a href="#"class="navButton">About</a></li>
+            <li><a href="#"class="navButton">Courses</a></li>
+            <li><a href="#"class="navButton">Events</a></li>
+            <li><a href="#"class="navButton">Blog</a></li>
         </ul>
         <input type="text" placeholder=" Search..." name="search">
         <button class="hamburger hamburger--collapse" type="button" onclick="">
@@ -84,14 +84,18 @@
         });
 
 
-        var a=document.querySelectorAll(".links");
-        console.log(a.length);
+        var a=document.querySelectorAll(".navButton");
+        console.log(a);
         for (let i = 0; i < a.length; i++) {
-          const element = a[i];
-          element.onclick=()=>
-          {
-            element.style.color="red";
-          };
+        var element = a[i];
+         // element.onclick=()=>
+          //{
+           // element.style.color="red";
+         // };
+         element.addEventListener("click", ()=>{
+            element.classList.toggle(".navbar.active");
+         });
+          
         }
 
 
